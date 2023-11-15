@@ -1,0 +1,12 @@
+[Unit]
+Description=kaldi-server service
+
+[Service]
+Type=simple
+User=kaldi
+WorkingDirectory=/opt/kaldi_models
+ExecStart=/usr/local/bin/kaldi_server
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
